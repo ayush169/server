@@ -1,5 +1,5 @@
 const ws = require("ws");
-const server = new ws.Server({ port: 3000, host: "0.0.0.0" });
+const server = new ws.Server({ port: 3000 });
 
 // server.on("connection", (socket) => {
 //   socket.on("message", (message) => {
@@ -24,3 +24,5 @@ server.on("connection", (socket, request) => {
     socket.send(`${message}`);
   });
 });
+
+console.log(new Date() + " Server is listening on port 3000");
